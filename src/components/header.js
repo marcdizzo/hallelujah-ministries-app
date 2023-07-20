@@ -18,6 +18,23 @@ const Header = () => {
   return (
     <>
         <header>
+            <div className='top-header py-2'>
+                <div className="container">
+                    <div className='d-flex justify-content-between'>
+                        <div></div>
+                        <div className='signin mr-[40px]'>
+                            <Link to="/signin" className='signin-btn'>
+                                Login
+                            </Link>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </header>
+        <header>
             <nav>
                 <div className='py-3 shadow-md'>
                     <div className='container'>

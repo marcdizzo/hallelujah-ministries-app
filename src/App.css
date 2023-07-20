@@ -320,8 +320,19 @@ h3{
     background: #f9f9f9;
     box-shadow: inset 0px 0px 25px rgba(0,0,0,0.1);
 }
-
-
-
 /* blog section ends here  */
 
+/* header starts here  */
+.signin-btn {
+    padding: 5px 6px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+.top-header {
+    background-color: #fafafa;
+}
+
+/* header ends here  */
