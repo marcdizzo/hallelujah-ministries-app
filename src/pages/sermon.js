@@ -41,7 +41,7 @@ const Sermon = () => {
                 
         </div>
         <div className="sermon-wrapper my-[80px] mx-20">
-            <div className="sermon-img">
+            <div className="sermon-img w-full">
                 <img 
                 src={sermon.pictures[0].url} 
                 alt="img" 
