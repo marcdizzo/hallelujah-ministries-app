@@ -337,6 +337,7 @@ h3{
 
 /* header ends here  */
 
-.sermon-img{
+.ser-image {
     width: 100%;
+    height: auto;
 }

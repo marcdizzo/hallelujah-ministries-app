@@ -44,8 +44,8 @@ const Sermon = () => {
             <div className="sermon-img w-full">
                 <img 
                 src={sermon.pictures[0].url} 
-                alt="img" 
-                
+                alt="img"
+                className='ser-image' 
                 />
                 <div className="flex gap-5 align-items-center border-b py-4">
                     <div className='flex ml-4 justify-content-center gap-2 align-items-center'>
