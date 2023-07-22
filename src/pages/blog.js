@@ -31,7 +31,7 @@ const Blog = () => {
                         <span className='text-blue-gray-700 text-base'>{blog.title}</span>
                     </Breadcrumbs>
         </div>
-        <div className="mt-5 mb-4 mx-20">
+        <div className="mt-5 mb-4 mx-20 blog-img">
             <img src={blog.blogImgs[0].url} 
             alt="blogimg" />
         </div>

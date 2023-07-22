@@ -100,6 +100,11 @@ h1{
 .dark-subtitle {
     color: #666666;
 }
+
+.blog-img {
+    width: 100%;
+    height: auto;
+}
 /* blog ends here */
 
 /* stats section  */
