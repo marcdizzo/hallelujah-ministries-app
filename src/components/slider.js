@@ -1,5 +1,6 @@
 import React from 'react'
 import { Carousel, Typography, Button } from "@material-tailwind/react";
+import { Link } from 'react-router-dom';
 
 const Slider = () => {
   return (
@@ -19,21 +20,19 @@ const Slider = () => {
               color="white"
               className="mb-4 text-3xl md:text-4xl lg:text-5xl"
             >
-              The Beauty of Nature
+              Hallelujah Ministries Sunday Prayers
             </Typography>
             <Typography
               variant="lead"
               color="white"
               className="mb-12 opacity-80"
             >
-              It is not so much for its beauty that the forest makes a claim
-              upon men&apos;s hearts, as for that subtle something, that
-              quality of air that emanation from old trees, that so
-              wonderfully changes and renews a weary spirit.
+              Prayer will make a man cease from sin,
+              entice a man to cease from prayer
             </Typography>
             <div className="flex justify-center gap-2">
               <Button size="lg" color="white">
-                Explore
+                View Prayers
               </Button>
               <Button size="lg" color="white" variant="text">
                 Gallery
@@ -55,21 +54,21 @@ const Slider = () => {
               color="white"
               className="mb-4 text-3xl md:text-4xl lg:text-5xl"
             >
-              The Beauty of Nature
+              Online Sermons Each Sunday Morning 
             </Typography>
             <Typography
               variant="lead"
               color="white"
               className="mb-12 opacity-80"
             >
-              It is not so much for its beauty that the forest makes a claim
-              upon men&apos;s hearts, as for that subtle something, that
-              quality of air that emanation from old trees, that so
-              wonderfully changes and renews a weary spirit.
+             What are you complaining about? said God.
+             They won't let Me in either.
             </Typography>
             <div className="flex gap-2">
               <Button size="lg" color="white">
-                Explore
+                <Link to="/sermons">
+                All Sermons 
+                </Link>
               </Button>
               <Button size="lg" color="white" variant="text">
                 Gallery
@@ -91,21 +90,19 @@ const Slider = () => {
               color="white"
               className="mb-4 text-3xl md:text-4xl lg:text-5xl"
             >
-              The Beauty of Nature
+              Church Missions for Fundrasing
             </Typography>
             <Typography
               variant="lead"
               color="white"
               className="mb-12 opacity-80"
             >
-              It is not so much for its beauty that the forest makes a claim
-              upon men&apos;s hearts, as for that subtle something, that
-              quality of air that emanation from old trees, that so
-              wonderfully changes and renews a weary spirit.
+              All Peoples are a value to God;
+              reaching them with the Gospel.
             </Typography>
             <div className="flex gap-2">
               <Button size="lg" color="white">
-                Explore
+                Join our Mission
               </Button>
               <Button size="lg" color="white" variant="text">
                 Gallery
