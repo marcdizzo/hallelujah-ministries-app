@@ -9,7 +9,7 @@ import Pagination from 'components/pagination';
 const Devotionals = () => {
     const devotions = useSelector((state) => state.devotions);
     const [currentPage, setCurrentPage] = useState(1);
-    const [sermonsPerPage, setSermonsPerPage] = useState(2);
+    const [sermonsPerPage, setSermonsPerPage] = useState(4);
 
 
     const indexOfLastDevotion = currentPage * sermonsPerPage;
