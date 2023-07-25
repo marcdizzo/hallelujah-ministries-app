@@ -13,10 +13,10 @@ const Blog = ({_id,title,article,blogImgs}) => {
   return (
         <div>
             <Card className="mt-6 w-90">
-                <CardHeader color="blue-gray" className="relative">
+                <CardHeader color="blue-gray" className="relative blog-header">
                     <img 
                     src={blogImgs[0].url} 
-                    alt="img-blur-shadow"  />
+                    alt="img-blur-shadow blogs-img"  />
                 </CardHeader>
                 <CardBody>
                     <Typography variant="h5" color="blue-gray" className="mb-2">

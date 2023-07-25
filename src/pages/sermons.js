@@ -9,7 +9,7 @@ import Pagination from 'components/pagination'
 
 const Sermons = () => {
   const dispatch = useDispatch();
-  const sermons = useSelector((state) => state.sermons)
+  const sermons = useSelector((state) => state.sermons);
   const [currentPage, setCurrentPage] = useState(1);
   const [sermonsPerPage, setSermonsPerPage] = useState(4);
 

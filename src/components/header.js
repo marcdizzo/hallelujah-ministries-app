@@ -6,6 +6,7 @@ import { Avatar } from "@material-tailwind/react";
 import Dropdown from "components/dropdown";
 import avatar from "../assets/img/avatars/avatar4.png";
 import { logout } from 'features/userSlice';
+import { isActiveStyles,isNotActiveStyles } from '../utils/styles'
 
 const Header = () => {
     const user = useSelector((state) => state.user);
@@ -17,7 +18,7 @@ const Header = () => {
 
   return (
     <>
-        <header>
+        {/* <header>
             <div className='top-header py-2'>
                 <div className="container">
                     <div className='d-flex justify-content-between'>
@@ -33,8 +34,8 @@ const Header = () => {
                 </div>
 
             </div>
-        </header>
-        <header>
+        </header> */}
+        <header className='sticky top-0 z-30 bg-white'>
             <nav>
                 <div className='py-3 shadow-md'>
                     <div className='container'>
@@ -45,18 +46,29 @@ const Header = () => {
                                         </h1>
                                     </div>
                                 
-                                <div className='header-links gap-15 d-flex  align-items-end'>
-                                    <NavLink to='/'>Home</NavLink>
-                                    <NavLink to='/sermons'>Sermons</NavLink>
-                                    <NavLink to='/devotions'>Devotionals</NavLink>
-                                    <NavLink to='/about'>About Us</NavLink>
-                                    <NavLink to='/contact'>Contact Us</NavLink>
+                                <div className='header-links gap-15 d-flex font-bold uppercase  align-items-end'>
+                                    <NavLink to='/' className={({isActive}) => isActive ? isActiveStyles: isNotActiveStyles}>
+                                        Home
+                                    </NavLink>
+                                    <NavLink to='/sermons' className={({isActive}) => isActive ? isActiveStyles: isNotActiveStyles}>
+                                        Sermons
+                                    </NavLink>
+                                    <NavLink to='/devotions' className={({isActive}) => isActive ? isActiveStyles: isNotActiveStyles}>
+                                        Devotionals
+                                    </NavLink>
+                                    <NavLink to='/about' className={({isActive}) => isActive ? isActiveStyles: isNotActiveStyles}>
+                                        About Us
+                                    </NavLink>
+                                    <NavLink to='/contact' className={({isActive}) => isActive ? isActiveStyles: isNotActiveStyles}>
+                                        Contact Us
+                                    </NavLink>
                                 </div>
 
                                 {
                                     !user  && (
                                         <>
                                             <div className='d-flex align-items-center gap-15 justify-content-between'>
+                                                   <NavLink to='/signin'>Sign in or Create Account</NavLink>
                                                    <NavLink><AiOutlineSearch className='icons' /></NavLink>
                                                     <NavLink>
                                                         <button className='border-0 button'>Give</button>   
