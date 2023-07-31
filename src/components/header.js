@@ -18,23 +18,6 @@ const Header = () => {
 
   return (
     <>
-        {/* <header>
-            <div className='top-header py-2'>
-                <div className="container">
-                    <div className='d-flex justify-content-between'>
-                        <div></div>
-                        <div className='signin mr-[40px]'>
-                            <Link to="/signin" className='signin-btn'>
-                                Login
-                            </Link>
-
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </header> */}
         <header className='sticky top-0 z-30 bg-white'>
             <nav>
                 <div className='py-3 shadow-md'>
@@ -46,7 +29,7 @@ const Header = () => {
                                         </h1>
                                     </div>
                                 
-                                <div className='header-links gap-15 d-flex font-bold uppercase  align-items-end'>
+                                <div className='header-links gap-15 d-flex font-semibold uppercase  align-items-end'>
                                     <NavLink to='/' className={({isActive}) => isActive ? isActiveStyles: isNotActiveStyles}>
                                         Home
                                     </NavLink>
@@ -68,7 +51,7 @@ const Header = () => {
                                     !user  && (
                                         <>
                                             <div className='d-flex align-items-center gap-15 justify-content-between'>
-                                                   <NavLink to='/signin'>Sign in or Create Account</NavLink>
+                                                   <NavLink to='/signin'>Sign in or Sign Up</NavLink>
                                                    <NavLink><AiOutlineSearch className='icons' /></NavLink>
                                                     <NavLink>
                                                         <button className='border-0 button'>Give</button>   

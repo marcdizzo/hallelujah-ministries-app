@@ -10,6 +10,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useSignupMutation } from 'services/appApi';
 import { Alert } from 'react-bootstrap';
+import TextField from "@mui/material/TextField";
 
 const SignUp = () => {
     const user = useSelector((state) => state.user);
@@ -39,12 +40,21 @@ const SignUp = () => {
         Enter your details to register.
       </Typography>
       <form onSubmit={handleSignup} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
-        {isError && <Alert variant='danger'>{error.data}</Alert>}
+        {/* {isError && <Alert variant='danger'>{error.data}</Alert>} */}
         <div className="mb-4 flex flex-col gap-6">
-          <Input size="lg" label="Name" value={name} onChange={(e) => setName(e.target.value)} />
-          <Input size="lg" label="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-          <Input type="password" size="lg" label="Password" value={password} 
-          onChange={(e) => setPassword(e.target.value)} />
+          <TextField 
+          id='outlined-basic' size='small' defaultValue="Small" label="Name" variant='outlined' 
+          value={name} onChange={(e) => setName(e.target.value)}
+          />
+          <TextField 
+          id='outlined-basic' size='small' defaultValue="Small" label="Email" variant='outlined' 
+          value={email} onChange={(e) => setEmail(e.target.value)}
+          />
+          <TextField 
+          id='outlined-basic' type='password' size='small' defaultValue="Small" label="Password" variant='outlined' 
+          value={password} 
+          onChange={(e) => setPassword(e.target.value)}
+          />
         </div>
         <Checkbox
           label={

@@ -31,48 +31,14 @@ const Blog = ({_id,title,article,blogImgs}) => {
                 <CardFooter className="pt-0">
                     <Link  to={`/blogs/${_id}`}>
                     
-                    <Button>
+                    <Button className='button'>
                         Read Article
                     </Button>
                     </Link>
                     
                 </CardFooter>
             </Card>
-            {/* <Card className="mt-6 w-96 ">
-                <CardHeader color="blue-gray" className="relative h-52">
-                    <img src="https://vatican.modeltheme.com/wp-content/uploads/2019/03/sermon-article-9-800x500.jpg"
-                     alt="img-blur-shadow"/>
-                </CardHeader>
-                <CardBody>
-                    <Typography variant="h5" color="blue-gray" className="mb-2">
-                    God Will Renew Your Joy in Ministry
-                    </Typography>
-                    <Typography>
-                    Somehow, in the midst of our best attempts as leaders to challenge the powers and principalities, we.
-                    </Typography>
-                </CardBody>
-                <CardFooter className="pt-0">
-                    <Button>Read Article</Button>
-                </CardFooter>
-            </Card> */}
-            {/* <Card className="mt-6 w-96 ">
-                <CardHeader color="blue-gray" className="relative h-52">
-                    <img 
-                    src="https://vatican.modeltheme.com/wp-content/uploads/2019/03/sermon-article-1-800x500.jpg" 
-                    alt="img-blur-shadow"/>
-                </CardHeader>
-                <CardBody>
-                    <Typography variant="h5" color="blue-gray" className="mb-2">
-                    Common Mistakes Preachers Make
-                    </Typography>
-                    <Typography>
-                    Somehow, in the midst of our best attempts as leaders to challenge the powers and principalities, we.
-                    </Typography>
-                </CardBody>
-                <CardFooter className="pt-0">
-                    <Button>Read Article</Button>
-                </CardFooter>
-            </Card> */}
+            
         </div>
   )
 }

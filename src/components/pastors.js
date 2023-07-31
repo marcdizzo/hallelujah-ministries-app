@@ -17,7 +17,7 @@ const Pastors = () => {
                         <div className="">
                             <Avatar src="https://vatican.modeltheme.com/wp-content/uploads/2017/11/pastor2.jpg" alt="avatar" size="xxl" />
                         </div>
-                        <h2 className='at-user-name mt-4'>Bruno Dias</h2>
+                        <h2 className='at-user-name mt-4'>Lamech Ssetimba</h2>
                         <p className='at-user_title'>Director</p>
 
                         </div>

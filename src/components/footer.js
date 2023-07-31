@@ -2,6 +2,7 @@ import React from 'react'
 
 import { FaInstagram , FaTwitter, FaFacebook ,FaYoutube , FaWhatsapp } from 'react-icons/fa';
 import { Typography } from "@material-tailwind/react";
+import { Link } from 'react-router-dom';
  
 const LINKS = [
   {
@@ -14,7 +15,7 @@ const LINKS = [
   },
   {
     title: "Resource",
-    items: ["Blog", "Newsletter", "Events", "Help center"],
+    items: ["Blog", "Newsletter", "Events", "Testimonials"],
   },
 ];
  
@@ -23,7 +24,7 @@ const currentYear = new Date().getFullYear();
 const Footer = () => {
   return (
     <div>
-        <footer className="relative w-full footer pt-5">
+        {/* <footer className="relative w-full footer pt-5">
             <div className="mx-auto w-full max-w-7xl px-8">
                 <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
                 <Typography variant="h5" className="mb-6">
@@ -108,99 +109,210 @@ const Footer = () => {
                 </div>
                 </div>
             </div>
-        </footer>
-                {/* <div>
-    <div className='bg-black h-1/2 w-full flex md:flex-row flex-col 
-    justify-around  items-start p-20'>
-   <div className='p-5'>
-       <ul>
-           <p className='text-white font-bold text-3xl pb-5'>
-               Hallelujah <span className='text-indigo-500'>Ministries</span>
-           </p>
-           <div className='flex gap-6  md:gap-9 pb-5'>
-               <FaInstagram className='text-2xl cursor-pointer text-white
-               hover:text-indigo-500' />
-               <FaTwitter className='text-2xl cursor-pointer text-white
-                hover:text-indigo-500' />
-               <FaFacebook className='text-2xl cursor-pointer text-white
-                hover:text-indigo-500' />
-               <FaYoutube className='text-2xl cursor-pointer text-white
-               hover:text-indigo-500' />
-               <FaWhatsapp className='text-2xl cursor-pointer text-white
-               hover:text-indigo-500' />
-           </div>
-       </ul>
-   </div>
-   <div className='p-5'>
-       <ul>
-           <p className='text-white font-bold text-2xl pb-4'>
-               Daily Devotional
-           </p>
-           <li className='text-gray-200 text-sm pb-2 font-semibold
-           hover:text-indigo-500 cursor-pointer'>
-               Pockets
-           </li>
-           <li className='text-gray-200 text-sm pb-2 font-semibold
-           hover:text-indigo-500 cursor-pointer'>
-               Weavings
-           </li>
-           <li className='text-gray-200 text-sm pb-2 font-semibold
-           hover:text-indigo-500 cursor-pointer'>
-              Alive Now
-           </li>
-       </ul>
-   </div>
-   <div className='p-5'>
-       <ul>
-           <p className='text-white font-bold text-2xl pb-4'>
-               Hellelujah Books
-           </p>
-           <li className='text-gray-200 text-sm pb-2 font-semibold
-           hover:text-indigo-500 cursor-pointer'>
-               Pockets
-           </li>
-           <li className='text-gray-200 text-sm pb-2 font-semibold
-           hover:text-indigo-500 cursor-pointer'>
-               Weavings
-           </li>
-           <li className='text-gray-200 text-sm pb-2 font-semibold
-           hover:text-indigo-500 cursor-pointer'>
-              Alive Now
-           </li>
-       </ul>
-   </div>
-   <div className='p-5'>
-       <ul>
-           <p className='text-white font-bold text-2xl pb-4'>
-               Support
-           </p>
-           <li className='text-gray-200 text-sm pb-2 font-semibold
-           hover:text-indigo-500 cursor-pointer'>
-               Contact
-           </li>
-           <li className='text-gray-200 text-sm pb-2 font-semibold
-           hover:text-indigo-500 cursor-pointer'>
-               FAQS
-           </li>
-       </ul>
-   </div>
-   
-   
-   
-</div>
-<div className='  justify-center items-center h-10 bg-black'>
-   <h1 className='text-xs text-center sm:text-sm mr-3 text-gray-200 gap-x-1 font-semibold'>
-       © 2022 All rights reserved | Built
-       by
-       <span className='hover:text-indigo-500 ml-2 font-semibold cursor-pointer'>
-           Marc Dizzo
-       </span>
-   </h1>
-</div>
+        </footer> */}
+        {/* <footer class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+    <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3 text-xl">Tailblocks</span>
+      </a>
+      <p class="mt-2 text-sm text-gray-500">Air plant banjo lyft occupy retro adaptogen indego</p>
+    </div>
+    <div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+          </li>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="bg-gray-100">
+    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+      <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 Tailblocks —
+        <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@knyttneve</a>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+        <a class="text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </div>
+</footer> */}
+        <footer className="footer">
+    <div class="container px-6 py-12 mx-auto">
+        <div class="md:flex md:-mx-3 md:items-center md:justify-between">
+            <h1 class="text-xl font-semibold tracking-tight text-gray-800 md:mx-3 xl:text-2xl dark:text-white">Subscribe our newsletter to get update.</h1>
+            
+            <div class="mt-6 md:mx-3 shrink-0 md:mt-0 md:w-auto">
+                <a href="#" class="inline-flex items-center justify-center w-full px-4 py-2 text-sm text-white duration-300 bg-gray-800 rounded-lg gap-x-3 hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80">
+                    <span>Sign Up Now</span>
 
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        
+        <hr class="my-6 border-blue-gray-50 md:my-10 dark:border-gray-700" />
 
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <div>
+                <p class="font-semibold text-gray-800 dark:text-white">Quick Links</p>
 
-                </div> */}
+                <div class="flex flex-col items-start mt-5 space-y-2">
+                    <a href="#" class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Home</a>
+                    <a href="#" class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Who We Are</a>
+                    <a href="#" class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">About Us</a>
+                </div>
+            </div>
+
+            <div>
+                <p class="font-semibold text-gray-800 dark:text-white">Daily</p>
+
+                <div class="flex flex-col items-start mt-5 space-y-2">
+                    <a href="#" class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Sermons</a>
+                    <a href="#" class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Devotionals</a>
+                    <a href="#" class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Blog</a>
+                </div>
+            </div>
+
+            <div>
+                <p class="font-semibold text-gray-800 dark:text-white">Useful Links</p>
+
+                <div class="flex flex-col items-start mt-5 space-y-2">
+                    <a href="#" class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Give</a>
+                    <a href="#" class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Prayer</a>
+                    <a href="#" class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Donate</a>
+                </div>
+            </div>
+
+            <div>
+                <p class="font-semibold text-gray-800 dark:text-white">Contact Us</p>
+
+                <div class="flex flex-col items-start mt-5 space-y-2">
+                    <a href="#" class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">+256 704 894878</a>
+                    <a href="#" class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">info@hallelujahministries.com</a>
+                    <div className='flex gap-4'>
+                        <a href="#">
+                            <FaFacebook className='h-5 w-5 text-gray-600 hover:text-blue-500' />
+                        </a>
+                        <a href="#">
+                            <FaInstagram className='h-5 w-5 text-gray-600 hover:text-blue-500' />
+                        </a>
+                        <a href="#">
+                            <FaYoutube className='h-5 w-5 text-gray-600 hover:text-blue-500' />
+                        </a>
+                        <a href="#">
+                            <FaTwitter className='h-5 w-5 text-gray-600 hover:text-blue-500' />
+                        </a>
+                        <a href="#">
+                            <FaWhatsapp className='h-5 w-5 text-gray-600 hover:text-blue-500' />
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <hr class="my-6 border-blue-gray-50 md:my-10 dark:border-gray-700" />
+        
+        <div class="flex flex-col items-center justify-between sm:flex-row">
+            <a href="#">
+                <h1 className='text-2xl'>Hallelujah Ministries</h1>
+            </a>
+
+            <p class="mt-4 text-sm text-gray-500 sm:mt-0 dark:text-gray-300">© Copyright {currentYear}. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+               
     </div>
     
   )

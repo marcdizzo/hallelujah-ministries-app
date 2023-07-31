@@ -7,21 +7,20 @@ import { PersistGate } from 'redux-persist/integration/react';
 import persistStore from 'redux-persist/es/persistStore';
 import { Provider } from 'react-redux';
 import store from './store';
+import { ThemeProvider } from '@material-tailwind/react';
 
 const persistedStore = persistStore(store);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  // <React.StrictMode>
   <Provider store={store}>
     <PersistGate loading={<div>Loading...</div>} persistor={persistedStore}>
       <Router>
-        <App />
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
       </Router>
     </PersistGate>
-    
   </Provider>
-    
-  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
