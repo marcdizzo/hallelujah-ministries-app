@@ -11,7 +11,7 @@ const Sermons = () => {
   const dispatch = useDispatch();
   const sermons = useSelector((state) => state.sermons);
   const [currentPage, setCurrentPage] = useState(1);
-  const [sermonsPerPage, setSermonsPerPage] = useState(4);
+  const [sermonsPerPage, setSermonsPerPage] = useState(6);
 
 
   const indexOfLastSermon = currentPage * sermonsPerPage;
